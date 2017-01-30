@@ -6,7 +6,7 @@ class Api::PostsController < ApplicationController
 
 	def show
 		post = Post.find(params[:id])
-		render json: post
+		render json: post.as_json(include:[:comments])
 	end
 
 	def create
