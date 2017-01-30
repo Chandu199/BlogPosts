@@ -1,5 +1,5 @@
-class Api::PostsController < ApplicationController
-	skip_before_filter :verify_authenticity_token
+class Api::PostsController < Api::ApiController
+
 	def index
 		render json: Post.all
 	end

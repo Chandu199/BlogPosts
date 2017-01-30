@@ -1,6 +1,4 @@
-class Api::CommentsController < ApplicationController
-	
-	skip_before_filter :verify_authenticity_token
+class Api::CommentsController < Api::ApiController
 	before_action :find_post
 
 	def create
